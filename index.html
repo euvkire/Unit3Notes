@@ -14,12 +14,12 @@
 
     const inputElement = document.getElementById('parent');
     const buttonElement = document.getElementById('button1');
+    const parentElement = document.getElementById('parent');
 
-    inputElement.addEventListener('change', function(e){
-        console.log(`The value you entered is ${e.target.value}`);
-        e.stopPropagation();
+    document.addEventListener('keydown', function(e){
+        console.log(e);
     });
-    inputElement.addEventListener('change', function(e){
+    inputElement.addEventListener('blur', function(e){
         console.log(`The value you entered is ${e.target.value}`);
     })
 </script>

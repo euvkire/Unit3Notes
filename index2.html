@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Change Contents of an Element Notes</title>
+    <style>
+        .hidden{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+    <hi>Change Contents Notes</hi>
+        <div class="row">
+            <div>
+                <label for="first">First Name</label>
+                <input type="text" id="first" name="first_name" placeholder="Jane">
+            </div>
+            <div>
+                <label for="first">Last Name</label>
+                <input type="text" id="last" name="last_name" placeholder="Doe">
+
+            </div>
+            <button name="clear">Clear</button>
+            <p class="hidden"></p>
+        </div>
+    </div>
+</div>
+<script>
+    const firstName = document.getElementById('first');
+    const lastName = document.getElementById('last');
+    const full = document.querySelector('p');
+    const clearButton = document.querySelector('[name="clear"]');
+
+    firstName.addEventListener('change', function(e){
+        let first = firstName.value;
+        let last = lastName.value;
+        let fullName = `Hello ${first} ${last}!`;
+        if(fullName.length>1){
+            full.classList.remove("hidden")
+        } else{
+            full.classList.add("hidden")
+        }
+        full.textContent = `hello ${fullName}!`;
+    });
+    lastName.addEventListener('change', function(e){
+        let first = firstName.value;
+        let last = lastName.value;
+        let fullName = `Hello ${first} ${last}!`;
+        if(fullName.length>1){
+            full.classList.remove("hidden")
+        } else{
+            full.classList.add("hidden")
+        }
+        full.textContent = `hello ${fullName}!`;
+    });
+    clearButton.addEventListener('click', function(e){
+        firstName.value = "";
+        lastName.value = "";
+        full.textcontent = "";
+
+        function nameCreator(){
+            let first = firstName.value;
+            let last = lastName.value;
+            let fullName = `${first} ${last}`;
+            if (fullName.length>1){
+                full.classList.remove("hidden")
+            } else{
+                full.classList.add("hidden")
+            }
+            full.textContent = `Hello ${fullName}!`;
+        }
+    })
+    firstName.addEventListener('change', nameCreator);
+    lastName.addEventListener('change', nameCreator);
+</script>
+</body>
+</html>
