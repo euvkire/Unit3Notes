@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .red{
+            background-color:red;
+        }
+        .green{
+            background-color:green;
+        }
+        .blue{
+            background-color:blue;
+        }
+        .pink{
+            background-color:pink;
+        }
+        .teal{
+            background-color:teal;
+        }
+        .purple{
+            background-color:purple;
+        }
+        .black{
+            background-color:black;
+        }
+        .gold{
+            background-color:gold;
+        }
+        .lightcyan{
+            background-color:lightcyan;
+        }
+        .orange{
+            background-color:orange;
+        }
+        .brown{
+            background-color:brown;
+        }
+        .violet{
+            background-color:violet;
+        }
+
+    </style>
+</head>
+<body>
+<div class="containter">
+    <div class="content">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst
+            vestibulum. Libero id faucibus nisl tincidunt. Nec nam aliquam sem et tortor
+            consequat id porta. Donec massa sapien faucibus et. At tellus at urna condimentum
+            mattis pellentesque id nibh. Faucibus interdum posuere lorem ipsum dolor sit. Nulla
+            pellentesque dignissim enim sit amet venenatis urna. Ac ut consequat semper viverra
+            nam libero justo laoreet. Nibh sed pulvinar proin gravida. Vitae purus faucibus ornare
+            suspendisse sed nisi. Luctus accumsan tortor posuere ac ut consequat semper viverra.
+            Justo laoreet sit amet cursus sit amet dictum sit. Donec adipiscing tristique risus
+            nec feugiat in fermentum posuere urna. Fames ac turpis egestas integer eget aliquet.
+            Metus dictum at tempor commodo ullamcorper a lacus vestibulum. Lacinia at quis risus
+            sed vulputate odio ut. Congue quisque egestas diam in arcu. Non sodales neque sodales
+            ut etiam sit amet nisl purus. Mauris sit amet massa vitae.</p>
+        <div class="row">
+            <h3>Background</h3>
+            <button id="1">RED</button>
+            <button id="2">GREEN</button>
+            <button id="3">BLUE</button>
+            <button id="4">BLACK</button>
+            <button id="5">BROWN</button>
+            <button id="6">LIGHTCYAN</button>
+        </div>
+        <div class="row">
+            <h3>Text</h3>
+            <button id="7">PINK</button>
+            <button id="8">TEAL</button>
+            <button id="9">PURPLE</button>
+            <button id="10">GOLD</button>
+            <button id="11">ORANGE</button>
+            <button id="12">VIOLET</button>
+        </div>
+        <button id="clear">CLEAR</button>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('content');
+    const red = document.getElementById('1');
+    const green = document.getElementById('2');
+    const blue = document.getElementById('3');
+    const black = document.getElementById('4');
+    const brown = document.getElementById('5');
+    const lightcyan = document.getElementById('6');
+
+    const pink = document.getElementById('7');
+    const teal = document.getElementById('8');
+    const purple = document.getElementById('9');
+    const gold = document.getElementById('10');
+    const orange = document.getElementById('11');
+    const violet = document.getElementById('12');
+
+    const clearButton = document.getElementById('clear');
+
+    red.addEventListener('click', function(e){
+        content.classList.add('red');
+    });
+
+    green.addEventListener.add('click', function(e){
+        content.classList.add('green');
+    });
+
+    blue.addEventListener('click', function(e){
+        content.classList.add('blue');
+    });
+
+    black.addEventListener('click', function(e){
+        content.classList.add('black');
+    });
+
+    brown.addEventListener('click', function(e){
+        content.classList.add('brown');
+    });
+
+    lightcyan.addEventListener('click', function(e){
+        content.classList.add('lightcyan');
+    });
+
+    pink.addEventListener('click', function(e){
+        content.classList.add('pink');
+    });
+
+    teal.addEventListener('click', function(e){
+        content.classList.add('teal');
+    });
+
+    purple.addEventListener('click', function(e){
+        content.classList.add('purple');
+    });
+
+    gold.addEventListener('click', function(e){
+        content.classList.add('gold');
+    });
+
+    orange.addEventListener('click', function(e){
+        content.classList.add('orange');
+    });
+
+    violet.addEventListener('click', function(e){
+        content.classList.add('violet');
+    });
+
+
+    function removeBGColor(){
+        content.classList.remove('red');
+        content.classList.remove('green');
+        content.classList.remove('blue');
+    }
+
+    function removeTextColor(){
+        content.classList.remove('pink');
+        content.classList.remove('teal');
+        content.classList.remove('purple');
+    }
+
+    clearButton.addEventListener('click', function(e){
+        removeTextColor();
+        removeBGColor();
+    })
+</script>
+</body>
+</html>
