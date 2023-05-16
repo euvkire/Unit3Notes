@@ -3,49 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
     <div class="content">
-        <h1>Hi</h1>
-        <form>
-            <fieldset>
-                <legend></legend>
-                <div class="row">
-                    <div>
-                        <label for="item">Items</label>
-                        <input id="item" name="item_name" type="item">
-                    </div>
-                </div>
-            </fieldset>
-        </form>
+        <h3>Enter item</h3>
+        <div class="row">
+            <div>
+                <label for="first-name">Item name</label>
+                <input type="text" id="first-name" name="first-name" style="width: 100px;">
+
+            </div>
+        </div>
     </div>
 </div>
+<div class="row"></div>
+<button id="name-button">Add item</button>
 <script>
-//
-    //
-    const myList = document.querySelector('ul');
+    const firstNameInput = document.getElementById('first-name');
+    const button = document.getElementById('name-button');
+    content = document.querySelector(`.content`);
 
-    function addItem() {
-        //
-        //
-        let newElement = document.createElement('li');
-        //
-        newElement.addEventListener('click', function (e) {
-            //
-        });
-        myList.appendChild(newElement)
-        //
+    button.addEventListener('click', handleName);
+
+    function handleName(event) {
+
+        event.preventDefault();
+
+        const firstName = firstNameInput.value;
+
+
+        const message = document.createElement('p');
+
+        message.innerText = `- ${firstName}`;
+
+        content.appendChild(message);
+
+        firstNameInput.value = '';
+
     }
-    addButton.addEventListener('click', addItem);
-
-
 </script>
-
-
-<fieldset>
-    <button type="submit" onclick="alert ('Cabbage')">Food Items</button>
-</fieldset>
 </body>
 </html>
