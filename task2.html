@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h1>Hi</h1>
+        <form>
+            <fieldset>
+                <legend></legend>
+                <div class="row">
+                    <div>
+                        <label for="item">Items</label>
+                        <input id="item" name="item_name" type="item">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<script>
+//
+    //
+    const myList = document.querySelector('ul');
+
+    function addItem() {
+        //
+        //
+        let newElement = document.createElement('li');
+        //
+        newElement.addEventListener('click', function (e) {
+            //
+        });
+        myList.appendChild(newElement)
+        //
+    }
+    addButton.addEventListener('click', addItem);
+
+
+</script>
+
+
+<fieldset>
+    <button type="submit" onclick="alert ('Cabbage')">Food Items</button>
+</fieldset>
+</body>
+</html>
